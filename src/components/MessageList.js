@@ -1,14 +1,19 @@
 import React from 'react';
 import MessageItem from './MessageItem';
 import { connect } from 'react-redux';
+import { getMessage } from '../redux/Action';
 
 class MessageList extends React.Component {
+    
+    componentDidMount() {
+        this.props.dispatch(getMessage());
+      }
+    
     render() {
-        console.log(this.props)
         return (
                 <ul>
-                    {this.props.messages.map((message) => 
-                        <MessageItem message={ message }/> 
+                    {this.props.messages.map((msg) => 
+                        <MessageItem message={ msg }/> 
                     )}
                 </ul>
         )
@@ -17,6 +22,7 @@ class MessageList extends React.Component {
 
 
 const mapStateToProps = state => {
+    console.log(state)
     return {
         messages: state
     }

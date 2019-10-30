@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 
 class Chat extends React.Component {
     render() {
-        console.log(configureStore)
+        //console.log(configureStore)
         return (
             <Provider store={configureStore}>
                 <div>

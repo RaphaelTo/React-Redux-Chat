@@ -1,5 +1,5 @@
 import React from 'react';
-import { addMessage } from './../redux/Action';
+import { addMessage, getMessage } from './../redux/Action';
 import { connect } from 'react-redux';
 
 
@@ -34,6 +34,9 @@ const mapDispatchToProps = dispatch => {
     return {
         sendMessage: (message) => {
             dispatch(addMessage(message, "Inconnu"))
+        },
+        status: () => {
+            dispatch(getMessage())
         }
     }
 };
