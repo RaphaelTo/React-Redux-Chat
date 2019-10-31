@@ -6,14 +6,15 @@ import { getMessage } from '../redux/Action';
 class MessageList extends React.Component {
     
     componentDidMount() {
+        console.log(this.props)
         this.props.dispatch(getMessage());
       }
     
     render() {
         return (
                 <ul>
-                    {this.props.messages.map((msg) => 
-                        <MessageItem message={ msg }/> 
+                    {this.props.messages.map((msg, i) => 
+                        <MessageItem key={i} message={ msg }/> 
                     )}
                 </ul>
         )
@@ -22,7 +23,6 @@ class MessageList extends React.Component {
 
 
 const mapStateToProps = state => {
-    console.log(state)
     return {
         messages: state
     }

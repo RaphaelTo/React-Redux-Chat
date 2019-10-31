@@ -2,7 +2,8 @@ import {
     ADD_MESSAGE,
     LOAD_MESSAGES_PENDING,
     LOAD_MESSAGES_SUCCESS,
-    LOAD_MESSAGES_ERROR
+    LOAD_MESSAGES_ERROR,
+    SEND_USER
 } from './TypeAction';
 import axios from 'axios';
 
@@ -10,6 +11,11 @@ export const addMessage = (message, user) => ({
   type:ADD_MESSAGE,
   message,
   user  
+})
+
+export const sendUser = (user) => ({
+  type:SEND_USER,
+  user
 })
 
 export function getMessage() {

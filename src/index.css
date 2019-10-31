@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.chat {
+  background-color: cadetblue;
+  border-radius: 1em;
+}
+
+.pad {
+  padding: 0 30em 0 30em;
+}

@@ -1,20 +1,18 @@
 import React from 'react';
 import MessageList from './MessageList';
 import MessageBar from './MessageBar';
-import {configureStore} from './../redux/Store';
-import { Provider } from 'react-redux'
+import {} from './../index.css';
 
 class Chat extends React.Component {
     render() {
-        //console.log(configureStore)
         return (
-            <Provider store={configureStore}>
-                <div>
-                    <p>Voici le chat</p>
-                    <MessageList />
-                    <MessageBar/> 
+                <div className="pad">
+                    <div className="chat">
+                        <h1>Voici le chat</h1>
+                        <MessageList/>
+                        <MessageBar/> 
+                    </div>
                 </div>
-            </Provider>
         )
     }
 
